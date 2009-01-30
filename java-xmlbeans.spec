@@ -5,7 +5,7 @@
 
 %include	/usr/lib/rpm/macros.java
 Summary:	XMLBeans is a technology for accessing XML by binding it to Java types
-Name:		xmlbeans
+Name:		java-xmlbeans
 Version:	2.4.0
 Release:	0.1
 License:	Apache v2.0
@@ -52,7 +52,7 @@ Documentazione di %{srcname}.
 Dokumentacja do %{srcname}.
 
 %prep
-%setup -q
+%setup -q -n %{srcname}
 
 %patch0 -p1
 
