@@ -52,7 +52,7 @@ Documentazione di %{srcname}.
 Dokumentacja do %{srcname}.
 
 %prep
-%setup -q -n %{srcname}
+%setup -q -n %{srcname}-%{version}
 
 %patch0 -p1
 
