@@ -1,5 +1,7 @@
 # TODO:
 # - use source package
+#
+%define	srcname	xmlbeans
 
 %include	/usr/lib/rpm/macros.java
 Summary:	XMLBeans is a technology for accessing XML by binding it to Java types
@@ -8,9 +10,9 @@ Version:	2.4.0
 Release:	0.1
 License:	Apache v2.0
 Group:		Development/Languages/Java
-Source0:	http://apache.forall.pl/xmlbeans/binaries/%{name}-%{version}.zip
+Source0:	http://apache.forall.pl/xmlbeans/binaries/%{srcname}-%{version}.zip
 # Source0-md5:	43b92f83ad47f369035fc7b945e55b12
-Patch0:		%{name}-classpath.patch
+Patch0:		%{srcname}-classpath.patch
 URL:		http://xmlbeans.apache.org/
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
@@ -31,23 +33,23 @@ types. XMLBeans provides several ways to get at the XML, including:
 - Support for XML DOM.
 
 %package doc
-Summary:	Manual for %{name}
-Summary(fr.UTF-8):	Documentation pour %{name}
-Summary(it.UTF-8):	Documentazione di %{name}
-Summary(pl.UTF-8):	Podręcznik dla %{name}
+Summary:	Manual for %{srcname}
+Summary(fr.UTF-8):	Documentation pour %{srcname}
+Summary(it.UTF-8):	Documentazione di %{srcname}
+Summary(pl.UTF-8):	Podręcznik dla %{srcname}
 Group:		Documentation
 
 %description doc
-Documentation for %{name}.
+Documentation for %{srcname}.
 
 %description doc -l fr.UTF-8
-Documentation pour %{name}.
+Documentation pour %{srcname}.
 
 %description doc -l it.UTF-8
-Documentazione di %{name}.
+Documentazione di %{srcname}.
 
 %description doc -l pl.UTF-8
-Dokumentacja do %{name}.
+Dokumentacja do %{srcname}.
 
 %prep
 %setup -q
@@ -61,9 +63,9 @@ rm bin/_setlib
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_javadir}/xmlbeans,%{_bindir}}
 
-cp lib/*.jar $RPM_BUILD_ROOT%{_javadir}/%{name}
-ln -s %{name}/xbean.jar $RPM_BUILD_ROOT%{_javadir}/%{name}-%{version}.jar
-ln -s %{name}-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/%{name}.jar
+cp lib/*.jar $RPM_BUILD_ROOT%{_javadir}/%{srcname}
+ln -s %{srcname}/xbean.jar $RPM_BUILD_ROOT%{_javadir}/%{srcname}-%{version}.jar
+ln -s %{srcname}-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/%{srcname}.jar
 
 install bin/* $RPM_BUILD_ROOT/%{_bindir}
 
@@ -72,7 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_javadir}/%{name}
+%{_javadir}/%{srcname}
 %{_javadir}/*.jar
 %attr(755,root,root) %{_bindir}/*
 
