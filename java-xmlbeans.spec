@@ -9,7 +9,7 @@ Name:		java-xmlbeans
 Version:	2.4.0
 Release:	0.1
 License:	Apache v2.0
-Group:		Development/Languages/Java
+Group:		Libraries/Java
 Source0:	http://apache.forall.pl/xmlbeans/binaries/%{srcname}-%{version}.zip
 # Source0-md5:	43b92f83ad47f369035fc7b945e55b12
 Patch0:		%{srcname}-classpath.patch
