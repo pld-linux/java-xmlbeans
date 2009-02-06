@@ -1,5 +1,9 @@
 # TODO:
 # - use source package
+# - Ther is no spec for:
+#   java-xom (http://www.cafeconleche.org/XOM/)
+#   java-stax (http://stax.codehaus.org/)
+# - maven data (needed for xmlbeansxx.spec)
 #
 %define	srcname	xmlbeans
 
