@@ -1,12 +1,11 @@
 # TODO:
 # - use source package
-# - Ther is no spec for:
+# - There is no spec for:
 #   java-xom (http://www.cafeconleche.org/XOM/)
 #   java-stax (http://stax.codehaus.org/)
 # - maven data (needed for xmlbeansxx.spec)
-#
-%define	srcname	xmlbeans
 
+%define		srcname	xmlbeans
 %include	/usr/lib/rpm/macros.java
 Summary:	XMLBeans is a technology for accessing XML by binding it to Java types
 Name:		java-xmlbeans
@@ -14,7 +13,7 @@ Version:	2.4.0
 Release:	0.1
 License:	Apache v2.0
 Group:		Libraries/Java
-Source0:	http://www.apache.org/dist/xmlbeans/source/xmlbeans-2.4.0-src.zip
+Source0:	http://www.apache.org/dist/xmlbeans/source/xmlbeans-%{version}-src.zip
 # Source0-md5:	d6fc091ac3b435babdacf92d277ab3bf
 # based on https://saxon.svn.sourceforge.net/svnroot/saxon/latest9.1/build/build.xml
 Source1:	%{name}-build.xml
@@ -23,9 +22,9 @@ URL:		http://xmlbeans.apache.org/
 BuildRequires:	ant
 BuildRequires:	ant-nodeps
 BuildRequires:	dom4j
-BuildRequires:	jdom
-BuildRequires:	java-xom
 BuildRequires:	java-stax
+BuildRequires:	java-xom
+BuildRequires:	jdom
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
