@@ -6,7 +6,6 @@
 # - maven data (needed for xmlbeansxx.spec)
 
 %define		srcname	xmlbeans
-%include	/usr/lib/rpm/macros.java
 Summary:	XMLBeans is a technology for accessing XML by binding it to Java types
 Name:		java-xmlbeans
 Version:	2.4.0
